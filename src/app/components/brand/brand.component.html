@@ -1,24 +1,16 @@
-<div
-  *ngFor="let brand of brands"
-  class="card text-dark bg-light border-primary mb-3"
-  style="max-width: 18rem"
-  routerLink="/cars/brand/{{ brand.id }}"
->
-  <div class="card-body mx-2">
-    <div class="row">
-      <div class="col-md-8 mt-2">
-        {{ brand.brandName }}
+<div class="container">
+  <div class="row">
+    <div  class="col" *ngFor = "let brand of brands">
+      <div class="card" style="width: 18rem;" >
+        <img src="../../../assets/defaultBrand.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{brand.brandName}}</h2>
+          
+          <a (click) = currentBrand(brand) routerLink = "/cars/brand/{{brand.brandId}}" class="btn btn-primary">Cars</a>
+        </div>
       </div>
-      <div class="col-md-2">
-        <button mat-icon-button>
-          <mat-icon color="primary" class="mat-18">save</mat-icon>
-        </button>
-      </div>
-      <div class="col-md-2">
-        <button color="warn" mat-icon-button>
-          <mat-icon class="mat-18">close</mat-icon>
-        </button>
-      </div>
+      <br/>
     </div>
+   
   </div>
 </div>

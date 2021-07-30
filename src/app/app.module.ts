@@ -12,7 +12,7 @@ import { CarComponent } from './components/car/car.component';
 import { RentComponent } from './components/rent/rent.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CategoryComponent } from './components/category/category.component';
-import { ColorDialogComponent } from './components/color-dialog/color-dialog.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarDetailsComponent } from './components/car/car-details/car-details.component';
 
@@ -26,10 +26,10 @@ import { CarDetailsComponent } from './components/car/car-details/car-details.co
     RentComponent,
     NavComponent,
     CategoryComponent,
-    ColorDialogComponent,
+    
     CarDetailsComponent,
   ],
-  entryComponents: [ColorDialogComponent],
+  entryComponents: [],
   imports: [
     BrowserModule,
     AppRoutingModule,

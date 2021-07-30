@@ -21,4 +21,8 @@ export class BrandComponent implements OnInit {
       this.brands = response.data;
     });
   }
+
+  currentBrand(brand:Brand){
+    console.log(brand.brandId)
+  }
 }

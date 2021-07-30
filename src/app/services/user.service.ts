@@ -8,11 +8,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  apiUrl = 'https://localhost:44397/api/users/getall';
+  apiUrl = 'https://localhost:44364/api/';
 
   constructor(private httpClient: HttpClient) {}
 
   getUsers(): Observable<ListResponseModel<User>> {
-    return this.httpClient.get<ListResponseModel<User>>(this.apiUrl);
+    let newPath = this.apiUrl + 'users/getall';
+    return this.httpClient.get<ListResponseModel<User>>(newPath);
   }
 }

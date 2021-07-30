@@ -1,10 +1,10 @@
 import { Byte } from '@angular/compiler/src/util';
 
 export interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
+  userId: number;
+  userFirstName: string;
+  userLastName: string;
+  userEmail: string;
   passwordHash: Byte[];
   passwordSalt: Byte[];
   status: boolean;

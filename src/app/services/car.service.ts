@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CarService {
-  apiUrl = 'https://localhost:44397/api/';
+  apiUrl = 'https://localhost:44364/api/';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -19,17 +19,17 @@ export class CarService {
   }
 
   getCarsDetails(carId: number): Observable<ListResponseModel<CarDetails>> {
-    let newPath = this.apiUrl + 'cars/getcardetail?carId=' + carId;
+    let newPath = this.apiUrl + 'cars/getbycarid?carId=' + carId;
     return this.httpClient.get<ListResponseModel<CarDetails>>(newPath);
   }
 
   getCarsByColor(colorId: number): Observable<ListResponseModel<CarDetails>> {
-    let newPath = this.apiUrl + 'cars/getcarbycolor?colorId=' + colorId;
+    let newPath = this.apiUrl + 'cars/getallbycolorid?colorId=' + colorId;
     return this.httpClient.get<ListResponseModel<CarDetails>>(newPath);
   }
 
   getCarsByBrand(brandId: number): Observable<ListResponseModel<CarDetails>> {
-    let newPath = this.apiUrl + 'cars/getcarbybrand?brandId=' + brandId;
+    let newPath = this.apiUrl + 'cars/getallbybrandid?brandId=' + brandId;
     return this.httpClient.get<ListResponseModel<CarDetails>>(newPath);
   }
 }
